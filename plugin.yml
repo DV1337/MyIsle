@@ -1,0 +1,7 @@
+main: com.codeorb.myisle.myIsle
+name: myIsle
+version: 0.0.1
+author: myIsleDev
+authors: [evilmidget38, ludo7777, Husky, MYCRAFTisbest]
+description: The official myIsle plugin.
+load: STARTUP
