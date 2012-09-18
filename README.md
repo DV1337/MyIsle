@@ -18,10 +18,13 @@ V1.0
 <h1> Background </h1>
 MyIsle is a Bukkit plugin for the server MyIsle. It creates an interface for the player, allowing them to generate their own island in an open ocean-world map. They own and inhabit this Isle, and they can play it solo or invite others. There are many features that go along with this, owning the island is just the tip of the iceberg. There is a unique leveling system, random events, and many other features that will be mentioned below.
 <br>
-<br>
 <h1> Synopsis of Features </h1>
 <br>
 <h3> Isle Generation </h3>
+<ul>
+<li> Creates an island with a radius of 200. Island is populated with wildlife and trees.
+</li>
+</ul>
 
 
 
