@@ -20,7 +20,7 @@ public class PlayerListener implements Listener {
     	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + p.getName() + "has joined as level <var>");
     	    	 ((Player) p).sendMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + "This is a Isle server");
     	      }
-    	if (voteMsg) return;{
+    	if (myIsle.voteMsg) return;{
     		((Player) p).sendMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + "Vote for the server and get a larger isle");
     	}
 	}
