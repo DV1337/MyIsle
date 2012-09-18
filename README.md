@@ -25,19 +25,19 @@ For commands, please jump to the Commands section.
 <h3> Isle Generation </h3>
 <ul>
 <li> Creates an island with a radius of 200. Island is populated with wildlife and trees. Island has a glass dome.
-<li> Player's home is bound to middle of island, player cannot change /home.
-<li> Island should start with the default protection. Use factions for this.
+<li> Player's home is bound to middle of island, player cannot change /home.(link to simpleSpawn maybe?)
+<li> Island should start with the default protection. Use factions for this.(factions for factions)
 </li>
 </ul>
 <br>
 <h3> Player, Mob, & World Restrictions </h3>
 <ul>
-<li> World is flat. Grass and water are at the same level.
-<li> Random islands with treasure are generated. Same size as Player Owned Island, but with possibility of diamond ores and chests filled with goods.
+<li> World is flat. Grass and water are at the same level.(not plugin but world gens & multiverse)
+<li> Random islands with treasure are generated. Same size as Player Owned Island, but with possibility of diamond ores and chests filled with goods.(...)
 <li> Islands are always 500 blocks away from each other, on all sides. That which is not an island is water.
 <li> Player can build ONLY in their protection(see protection for more details). They can break blocks (for harvesting wood) outside their protection, and pick them up, but they CANNOT place ANYTHING outside their protection.
-<li> Player cannot build above 10 blocks from the surface. Player cannot build below the first level of grass.
-<li> Creepers can only blow up the first layer of grass, and up to 10 blocks from the surface.
+<li> Player cannot build above 10 blocks from the surface. Player cannot build below the first level of grass.(above is simply server block hight)
+<li> Creepers can only blow up the first layer of grass, and up to 10 blocks from the surface.(compleatly guard this layer(as if it was bedrock)
 </li>
 </ul>
 <br>
