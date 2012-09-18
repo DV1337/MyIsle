@@ -1,8 +1,6 @@
 package com.webs.mycraftisbest.evilmidget38._Husky_.MYCRAFTisbest.MyIsle;
 
 
-
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -25,12 +23,18 @@ import com.massivecraft.factions.struct.Role;
 
 public class myIsle extends JavaPlugin implements Listener {
 	public boolean voteMsg;
+	
 	public void onEnable(){
-		if(getServer().getPluginManager().getPlugin("votifier") != null)
-			voteMsg = true;
-		else
-			voteMsg = false;
+		voteMsg = votifierInstalled();
 	}
+	
+    private boolean votifierInstalled(){
+    	if(getServer().getPluginManager().getPlugin("votifier") != null) {
+			return true;
+		} else {
+			return false;
+		}
+    }
 	@EventHandler(priority = EventPriority.HIGHEST)
     public void PlayerJoin(final PlayerJoinEvent event) {
         Player p = event.getPlayer();
@@ -42,6 +46,8 @@ public class myIsle extends JavaPlugin implements Listener {
     	      }
     	      else if (p.getName().equals("Husky")){
     	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle] " + ChatColor.GOLD + "Husky made MyIsle");
+    	      } else if (p.getName().equals("ludo0777")) {
+    	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle] " + ChatColor.GOLD + "ludo0777 made MyIsle");
     	      }
     	      else{
     	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + p.getName() + "has joined as level <var>");
