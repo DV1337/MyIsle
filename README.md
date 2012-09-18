@@ -20,11 +20,20 @@ MyIsle is a Bukkit plugin for the server MyIsle. It creates an interface for the
 <br>
 <h1> Synopsis of Features </h1>
 <br>
+For commands, please jump to the Commands section.
+<br>
 <h3> Isle Generation </h3>
 <ul>
 <li> Creates an island with a radius of 200. Island is populated with wildlife and trees.
+<li> Player's home is bound to middle of island, player cannot change /home.
 </li>
 </ul>
+<br>
+<h3> Player, Mob, & World Restrictions </h3>
+<ul>
+<li> World is flat. Grass and water are at the same level.
+<li> Random islands with treasure are generated. Same size as Player Owned Island, but with possibility of diamond ores and chests filled with goods.
+<li> 
 
 
 
