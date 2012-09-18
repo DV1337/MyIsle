@@ -3,12 +3,13 @@
 
 <html>
 <body>
-<font color = "blue">//READ_ME</font>
+//READ_ME
 <br>
 WRITTEN BY DV1337
 <br>
 !MyIsle is not open source! It will be released as open source in the future.
-
+<br>
+<br>
 V1.0
 
 For the developers: <a href>This</a> is the link to the document with the features we need to be working on right now.
