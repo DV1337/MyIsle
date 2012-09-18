@@ -1,7 +1,10 @@
 package com.codeorb.myisle;
 
 import org.bukkit.Location;
+import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import com.codeorb.myisle.worldgenerator.MyIsleChunkGenerator;
 import com.massivecraft.factions.Board;
 import com.massivecraft.factions.FLocation;
 import com.massivecraft.factions.FPlayer;
@@ -31,6 +34,19 @@ public class myIsle extends JavaPlugin {
         } else {
             return false;
         }
+    }
+    /**
+     * 
+     * @param worldName
+     * The name of the world the generator is being applied to
+     * @param GenId
+     * The id (if any) specified by the user. It can be used if the plugin
+     * wants to have multiple generators in one plugin. More on this later.
+     * @return
+     * The ChunkGenerator that this plugin provides
+     */
+    public ChunkGenerator getDefaultWorldGenerator(String worldName, String GenId) {
+         return new MyIsleChunkGenerator();
     }
 
     public static void createNewFaction(String name, String creator, Location home){
