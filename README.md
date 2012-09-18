@@ -12,7 +12,7 @@ WRITTEN BY DV1337
 <br>
 V1.0
 <br>
-<h1> For the Developers
+<h1> For the Developers </h1>
 <a href>This</a> is the link to the document with the features we need to be working on right now.
 
 <h1> Background </h1>
