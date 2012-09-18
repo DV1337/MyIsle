@@ -20,7 +20,7 @@ import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.struct.Role;
 
 
-public class myIsle extends JavaPlugin implements Listener {
+public class myIsle extends JavaPlugin {
 	public boolean voteMsg;
 	
 	public void onEnable(){
