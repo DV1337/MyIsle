@@ -25,6 +25,7 @@ public class myIsle extends JavaPlugin implements Listener {
 	public boolean voteMsg;
 	
 	public void onEnable(){
+		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 		voteMsg = votifierInstalled();
 	}
 	
@@ -35,28 +36,6 @@ public class myIsle extends JavaPlugin implements Listener {
 			return false;
 		}
     }
-	@EventHandler(priority = EventPriority.HIGHEST)
-    public void PlayerJoin(final PlayerJoinEvent event) {
-        Player p = event.getPlayer();
-    	if (p.getName().equals("MYCRAFTisbest")) {
-    	      Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GOLD + "MYCRAFTisbest made MyIsle");
-    	}
-    	      else if (p.getName().equals("evilmidget38")) {
-    	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle] " + ChatColor.GOLD + "evilmidget38 made MyIsle");
-    	      }
-    	      else if (p.getName().equals("Husky")){
-    	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle] " + ChatColor.GOLD + "Husky made MyIsle");
-    	      } else if (p.getName().equals("ludo0777")) {
-    	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle] " + ChatColor.GOLD + "ludo0777 made MyIsle");
-    	      }
-    	      else{
-    	    	  Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + p.getName() + "has joined as level <var>");
-    	    	 ((Player) p).sendMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + "This is a Isle server");
-    	      }
-    	if (voteMsg) return;{
-    		((Player) p).sendMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + "Vote for the server and get a larger isle");
-    	}
-	}
 
 public static void createNewFaction(String name, String creator, Location home){
     Faction f = Factions.i.create(name);
