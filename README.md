@@ -1,3 +1,7 @@
+<a href="http://cooltext.com"><img src="http://images.cooltext.com/2774578.png" width="260" height="93" alt="MyIsle
+" /></a>
+<br />Image by <a href="http://cooltext.com">Cool Text: Free Logos and Buttons</a>
+
 //READ_ME
 
 WRITTEN BY DV1337
