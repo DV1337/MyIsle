@@ -24,8 +24,9 @@ public class myIsle extends JavaPlugin {
 	public boolean voteMsg;
 	
 	public void onEnable(){
-		getServer().getPluginManager().registerEvents(new PlayerListener(), this
+		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 		getServer().getPluginManager().registerEvents(new BlockListener(), this);
+		getServer().getPluginManager().registerEvents(new OtherListener(), this);
 		voteMsg = votifierInstalled();
 	}
 	
