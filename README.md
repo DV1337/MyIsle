@@ -83,6 +83,13 @@ At level 15 give all the players in a party a compass which shows where other pl
 
 Side Note: We are also utilizing RealisticChat for our chat needs.
 
+Oh, and also create a PointShop plugin. Not only should they get 3 EXP for killing a mob, but 3 Points which they can use to buy items.
+
+Some items have specific effects.
+
+Cobweb - regular effects, lasts 9 minutes when placed.
+Glowstone - lasts 2 minutes, drives away mobs in a certain radius of it.
+
 
 
 
