@@ -5,4 +5,5 @@ public class OtherListener implements Listener {
  
       @EventHandler(priority = EventPriority.HIGHEST)
         public void onCreatureSpawn(CreatureSpawnEvent event) {
+         System.out.println("MOB SPAWNED!!!");
     }
