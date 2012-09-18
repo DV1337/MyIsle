@@ -50,6 +50,7 @@ For commands, please jump to the Commands section.
 <li> If a player dies that night, subtract 5 EXP, giving them 5 EXP because they spent a day, but died. If a player survives, give 5 EXP + the points from what the kills gave. Rendering at least 15 points if they didn't kill any mobs.
 <li> Once player reaches level 15, unlock the glass Dome.
 <li> At level 50, give access to the warp called "Nexus 1".
+<li> Your protection should GROW every 10 levels. Meaning it should increase by around 50% every 10 levels.
 </li>
 </ul>
 <br>
@@ -62,7 +63,25 @@ For commands, please jump to the Commands section.
 <li> Levels 31 - 60: 5 Creepers, 4 Spiders, 8 Zombies, 4 Blazes.
 <li> Levels 61 - 100: 10 Creepers, 10 Zombies, 10 Spiders, 2 Blazes.
 <li> Remember to make mobs spawn on the edges of the protection area, not in the middle! Also, make sure they don't swim or leave the island.
+</li>
+</ul>
+<br>
+<h3> Co Op </h3>
+<ul>
+<li> You can have up to four people per Isle. Use factions for this.
+<li> Use aliases for faction commands. i.e /isle join [name] should be /f join, /isle invite [name] should be /f invite [name] and so on. And of course, /isle list should be /f list.
+<li> When someone kills a mob in the party of players on one island, give ALL of the players the EXP for killing the mob. Say Player 1 kills a mob. Players 2, 3, and 4 also get 3 EXP.
+<li> If one player dies in a party, subtract 5 from all and force them to execute /kill on themselves.
+<li> If one player dies, take away all EXP earned from that night as well.
+</li>
+</ul>
+PVP should be enabled. Players cannot break other players' things. If they swim to another island to PvP and there is a Dome over that island, tough luck for them. They need to find someone who is lvl 15 or up.
 
+DISABLE claiming of land or setting of /f home for people. 
+
+At level 15 give all the players in a party a compass which shows where other players are.
+
+Side Note: We are also utilizing RealisticChat for our chat needs.
 
 
 
