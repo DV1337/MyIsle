@@ -13,6 +13,12 @@ import com.massivecraft.factions.Faction;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.struct.Role;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
+
 
 public class myIsle extends JavaPlugin {
     
@@ -24,6 +30,7 @@ public class myIsle extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         getServer().getPluginManager().registerEvents(new BlockListener(), this);
         getServer().getPluginManager().registerEvents(new OtherListener(), this);
+        loadRecipes();
         voteMsg = votifierInstalled();
         i = this;
     }
@@ -35,6 +42,22 @@ public class myIsle extends JavaPlugin {
             return false;
         }
     }
+    private void loadRecipes() {
+    ItemStack cobwebItem = new ItemStack(Material.WEB);
+    
+    ShapedRecipe cobweb = new ShapedRecipe(cobwebItem);
+    
+
+   cobweb.shape(
+       "SSS",
+       "SWS",
+       "SSS");
+   cobweb.setIngredient('S', Material.STRING);  
+   cobweb.setIngredient('W', Material.WOOL);
+   Bukkit.addRecipe(cobweb);
+
+    
+}
     /**
      * 
      * @param worldName
