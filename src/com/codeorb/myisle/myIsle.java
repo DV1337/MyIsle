@@ -13,6 +13,7 @@ import com.massivecraft.factions.Faction;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.struct.Role;
 
+//for crafting cobwebs
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.event.Listener;
@@ -42,6 +43,7 @@ public class myIsle extends JavaPlugin {
             return false;
         }
     }
+    // possibly move to otherListner.class   OR create new class (if more recipies added)
     private void loadRecipes() {
     ItemStack cobwebItem = new ItemStack(Material.WEB);
     
