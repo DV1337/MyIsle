@@ -17,6 +17,7 @@ public class OtherListener implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onEnchant(EnchantItemEvent event) {
         event.setCancelled(true);
-        event.getEnchanter().sendMessage(ChatColor.BLUE + "Enchanting is not allowed!");
+        event.getEnchanter().sendMessage(ChatColor.BLUE + "Enchanting is not allowed, Buy the item");
     }
+    
 }
