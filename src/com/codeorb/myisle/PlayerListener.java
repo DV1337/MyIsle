@@ -9,7 +9,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
 public class PlayerListener implements Listener {
-    String[] devs = new String[]{"evilmidget38","Husky","MYCRAFTisbest", "ludo0777"};
+    String[] devs = new String[]{"evilmidget38","MYCRAFTisbest", "ludo0777"};
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void PlayerJoin(final PlayerJoinEvent event) {
