@@ -15,7 +15,6 @@ import org.bukkit.block.Block;
 import org.bukkit.generator.BlockPopulator;
 
 
-//CURRENTLY BROKEN!!!  If someone could look this over, that'd be great.
 public class IslandPopulator extends BlockPopulator{
 
     @Override
@@ -26,7 +25,6 @@ public class IslandPopulator extends BlockPopulator{
     }
 
     private void createIsland(Location loc){
-        System.out.println("Generating an island.");
         Location center = new Location(loc.getWorld(), loc.getBlockX()+5, loc.getBlockY(), loc.getBlockZ()+5);
         ArrayList<Block> blocks = new ArrayList<Block>();
         for (int x = loc.getBlockX(); x < loc.getBlockX()+10; x++)
@@ -40,11 +38,9 @@ public class IslandPopulator extends BlockPopulator{
     }
 
     private void buildIsland(List<Block> blocks){
-        long start = System.currentTimeMillis();
         for (Block b : blocks){
-            b.setType(Material.BEDROCK);
+            b.setType(Material.GRASS);
         }
-        System.out.println((System.currentTimeMillis()-start)/1000);
 
     }
 
