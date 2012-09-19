@@ -47,7 +47,7 @@ public class myIsle extends JavaPlugin {
     
     ShapedRecipe cobweb = new ShapedRecipe(cobwebItem);
     
-
+// This is where the cobweb craft structure could be overriden
    cobweb.shape(
        "SSS",
        "SWS",
