@@ -4,6 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.codeorb.myisle.exp.ExpManager;
 import com.codeorb.myisle.worldgenerator.MyIsleChunkGenerator;
 import com.massivecraft.factions.Board;
 import com.massivecraft.factions.FLocation;
@@ -19,6 +20,8 @@ public class myIsle extends JavaPlugin {
     public static myIsle i;
     
     public boolean voteMsg;
+    
+    private ExpManager expManager = new ExpManager();
 
     public void onEnable(){
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
@@ -26,6 +29,10 @@ public class myIsle extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new OtherListener(), this);
         voteMsg = votifierInstalled();
         i = this;
+    }
+    
+    public void onDisable(){
+        i = null;
     }
 
     private boolean votifierInstalled(){
@@ -35,6 +42,7 @@ public class myIsle extends JavaPlugin {
             return false;
         }
     }
+    
     /**
      * 
      * @param worldName
@@ -60,6 +68,10 @@ public class myIsle extends JavaPlugin {
         for (int x = center.getBlockX()-radius; x <= center.getBlockX()+radius; x+=16)
             for(int z = center.getBlockZ()-radius; z <= center.getBlockZ()+radius; z+=16)
                 Board.setFactionAt(f, new FLocation(center.getWorld().getName(), x, z));
+    }
+    
+    public ExpManager getExpManager(){
+        return expManager;
     }
 
 

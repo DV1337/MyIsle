@@ -25,12 +25,13 @@ public class IslandPopulator extends BlockPopulator{
     }
 
     private void createIsland(Location loc){
-        Location center = new Location(loc.getWorld(), loc.getBlockX()+5, loc.getBlockY(), loc.getBlockZ()+5);
+        int radius = 50;
+        Location center = new Location(loc.getWorld(), loc.getBlockX()+radius, loc.getBlockY(), loc.getBlockZ()+radius);
         ArrayList<Block> blocks = new ArrayList<Block>();
-        for (int x = loc.getBlockX(); x < loc.getBlockX()+10; x++)
-            for (int z = loc.getBlockZ(); z < loc.getBlockZ()+10; z++){
+        for (int x = loc.getBlockX(); x < loc.getBlockX()+(radius*2); x++)
+            for (int z = loc.getBlockZ(); z < loc.getBlockZ()+(radius*2); z++){
                 Location target = new Location(loc.getWorld(), x, loc.getBlockY(), z);
-                if (center.distance(target) < 4) 
+                if (center.distance(target) < radius) 
                     blocks.add(target.getBlock());
             }
         buildIsland(blocks);
