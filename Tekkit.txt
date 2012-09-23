@@ -15,11 +15,12 @@ Essentials and the essentials (you need the basic plugins for a normal bukkit se
 Economy plugin (tekkit has a lot of items that promote ecomomy. Many people create factories and such)
 PVP arena plugin (ok, you have guns and cannons now yay! Now they want something to shoot! (use World guard and 
             tekkit restrict to prevent it from falling apart)
-Decoys (not a plugin but useful. Make greifer decoys and traps to help identify the greifers)
 MCbans (you need to prevent those greifers and if you can set it up, it was worth the time)
+CoreProtect (this is very compatable with tekkit but you could try another rollback/logger plugin)
 World Border (this probably doesnt apply to you due to the server size you have, but players get as far from spawn as
-            possible
+            possible)
 
+Decoys (not a plugin but useful. Make greifer decoys and traps to help identify the greifers)
 
 Items to control
 
