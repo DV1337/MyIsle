@@ -5,6 +5,9 @@ import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.codeorb.myisle.exp.ExpManager;
+import com.codeorb.myisle.listeners.BlockListener;
+import com.codeorb.myisle.listeners.OtherListener;
+import com.codeorb.myisle.listeners.PlayerListener;
 import com.codeorb.myisle.worldgenerator.MyIsleChunkGenerator;
 import com.massivecraft.factions.Board;
 import com.massivecraft.factions.FLocation;
@@ -14,23 +17,30 @@ import com.massivecraft.factions.Faction;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.struct.Role;
 
+//for crafting cobwebs
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 
-public class myIsle extends JavaPlugin {
-    
-    public static myIsle i;
-    
+
+public class MyIsle extends JavaPlugin {
+
+    public static MyIsle i;
+
     public boolean voteMsg;
-    
+
     private ExpManager expManager = new ExpManager();
 
     public void onEnable(){
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         getServer().getPluginManager().registerEvents(new BlockListener(), this);
         getServer().getPluginManager().registerEvents(new OtherListener(), this);
+        loadRecipes();
         voteMsg = votifierInstalled();
         i = this;
     }
-    
+
     public void onDisable(){
         i = null;
     }
@@ -42,7 +52,24 @@ public class myIsle extends JavaPlugin {
             return false;
         }
     }
-    
+
+    // possibly move to otherListner.class   OR create new class (if more recipies added)
+    private void loadRecipes() {
+        ItemStack cobwebItem = new ItemStack(Material.WEB);
+
+        ShapedRecipe cobweb = new ShapedRecipe(cobwebItem);
+
+        // This is where the cobweb craft structure could be overriden
+        cobweb.shape(
+                "SSS",
+                "SWS",
+                "SSS");
+        cobweb.setIngredient('S', Material.STRING);  
+        cobweb.setIngredient('W', Material.WOOL);
+        Bukkit.addRecipe(cobweb);
+
+
+    }
     /**
      * 
      * @param worldName
@@ -54,7 +81,7 @@ public class myIsle extends JavaPlugin {
      * The ChunkGenerator that this plugin provides
      */
     public ChunkGenerator getDefaultWorldGenerator(String worldName, String GenId) {
-         return new MyIsleChunkGenerator();
+        return new MyIsleChunkGenerator();
     }
 
     public static void createNewFaction(String name, String creator, Location home){
@@ -69,7 +96,7 @@ public class myIsle extends JavaPlugin {
             for(int z = center.getBlockZ()-radius; z <= center.getBlockZ()+radius; z+=16)
                 Board.setFactionAt(f, new FLocation(center.getWorld().getName(), x, z));
     }
-    
+
     public ExpManager getExpManager(){
         return expManager;
     }

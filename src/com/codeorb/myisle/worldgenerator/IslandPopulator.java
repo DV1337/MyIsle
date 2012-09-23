@@ -14,7 +14,10 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.generator.BlockPopulator;
 
-
+/**
+ * 
+ * @deprecated
+ */
 public class IslandPopulator extends BlockPopulator{
 
     @Override

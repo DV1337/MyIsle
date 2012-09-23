@@ -116,13 +116,14 @@ public class MyIsleChunkGenerator extends ChunkGenerator{
     }
     
     
-    @Override
+    /*@Override  - Islands will be dynamically generated.
     public List<BlockPopulator> getDefaultPopulators(World world) {
         ArrayList<BlockPopulator> pops = new ArrayList<BlockPopulator>();
         pops.add(new IslandPopulator());
         return pops;
         
-    }
+    }*/
+
 
 
 }

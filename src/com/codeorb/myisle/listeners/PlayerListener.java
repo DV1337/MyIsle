@@ -1,4 +1,4 @@
-package com.codeorb.myisle;
+package com.codeorb.myisle.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -7,6 +7,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+
+import com.codeorb.myisle.MyIsle;
 
 public class PlayerListener implements Listener {
     String[] devs = new String[]{"evilmidget38","Husky","MYCRAFTisbest", "ludo0777"};
@@ -25,8 +27,11 @@ public class PlayerListener implements Listener {
             Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + p.getName() + "has joined as level <var>");
             ((Player) p).sendMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + "This is a Isle server");
         }
-        if (myIsle.i.voteMsg) return;{
+        if (MyIsle.i.voteMsg) return;{
             ((Player) p).sendMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + "Vote for the server and get a larger isle");
         }
     }
+    
+    
+    
 }

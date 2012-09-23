@@ -1,4 +1,4 @@
-package com.codeorb.myisle;
+package com.codeorb.myisle.listeners;
 
 import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Entity;
@@ -11,11 +11,12 @@ import org.bukkit.event.enchantment.EnchantItemEvent;
 import org.bukkit.event.player.PlayerExpChangeEvent;
 import org.bukkit.ChatColor;
 
+import com.codeorb.myisle.MyIsle;
+
 public class OtherListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onCreatureSpawn(CreatureSpawnEvent event) {
-        //System.out.println("MOB SPAWNED!!!");  For the sake of sanity.
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)
@@ -35,6 +36,6 @@ public class OtherListener implements Listener {
     
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerExpChange(PlayerExpChangeEvent e){
-        myIsle.i.getExpManager().grantExp(e.getPlayer().getName(), e.getAmount());
+        MyIsle.i.getExpManager().grantExp(e.getPlayer().getName(), e.getAmount());
     }
 }

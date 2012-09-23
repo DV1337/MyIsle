@@ -1,4 +1,4 @@
-package com.codeorb.myisle;
+package com.codeorb.myisle.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;

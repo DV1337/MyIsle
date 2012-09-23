@@ -7,36 +7,29 @@ import java.util.TreeMap;
 
 import net.minecraft.server.Packet43SetExperience;
 
-import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.entity.CraftPlayer;
-import org.bukkit.entity.Player;
-
 public class ExpManager {
-    TreeMap<String, PlayerLevel> experience = new TreeMap<String, PlayerLevel>();
+    TreeMap<String, PlayerExperience> experience = new TreeMap<String, PlayerExperience>();
     
-    
-    public void updatePlayers() {
-        for (String name : experience.keySet()) 
-            updatePlayer(name);
-    }
-    
-    public void updatePlayer(String name){
+    /*
+     * This currently isn't done, and as such, it won't be modifying the packets.  We'll probably be using a custom CB build to allow for this.
+     */
+    public void modifyPacket(Packet43SetExperience exp, String name){
         containsCheck(name);
-        Player player = Bukkit.getPlayer(name);
-        PlayerLevel exp = experience.get(name);
-        ((CraftPlayer)player).getHandle().netServerHandler.sendPacket(new Packet43SetExperience(exp.getXp(), exp.getExpForLevel(exp.level), exp.getLevel()));
+        PlayerExperience pe = experience.get(name);
+        exp.a = pe.getPercentageToNext();
+        exp.b = pe.getXp();
+        exp.c = pe.getLevel();
     }
     
     public void grantExp(String name, int amount) {
         containsCheck(name);
-        PlayerLevel level = experience.get(name);
+        PlayerExperience level = experience.get(name);
         level.addXp(amount);
-        updatePlayer(name);
     }
     
     private void containsCheck(String name){
         if (!experience.containsKey(name))
-            experience.put(name, new PlayerLevel(0, 0));
+            experience.put(name, new PlayerExperience(0, 0));
     }
 
 }

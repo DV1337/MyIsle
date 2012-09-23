@@ -4,12 +4,12 @@
 package com.codeorb.myisle.exp;
 
 
-public class PlayerLevel {
+public class PlayerExperience {
 
     int xp;
     int level;
 
-    public PlayerLevel(int xp, int level){
+    public PlayerExperience(int xp, int level){
         this.xp = xp;
         this.level = level;
     }
@@ -25,7 +25,6 @@ public class PlayerLevel {
      * @param xp The experience of the player.  Increases their level if necessary.
      */
     public void setXp(int newval) {
-
         int nextlevel = getExpToNextLevel();
         if (newval > nextlevel)
             newval = addLevels(newval);
@@ -68,20 +67,31 @@ public class PlayerLevel {
     }
 
     /**
-     * @return The Exp required for the next level of the player.
+     * @return The remaining exp required for the next level.
      */
     public int getExpToNextLevel(){
         return getExpForLevel(level+1)- xp;
     }
+    
+    /**
+     * @return The experience required for the next level of the player.
+     */
+    public int getExpForNextLevel(){
+        return getExpForLevel(level+1);
+    }
+    
+    /**
+     * @return The percent(represented as a float) to the next level.  Calculated as xp / getExpForNextLevel().
+     */
+    public float getPercentageToNext(){
+        return ((float) xp) / ((float)getExpForNextLevel());
+    }
     /**
      * @return The Exp required for the specified level.
      */
-    public int getExpForLevel(int theLevel) {
-        return (int) ((Math.pow(2, theLevel-1) * 5));
-    }
-    
-    public float getPercentToNext(){
-        return ((float)xp) / ((float)getExpToNextLevel());
+    public static int getExpForLevel(int theLevel) {
+        //1 -10, 2 - 10, 3 - 20, 4- 40
+        return (theLevel <= 0 ? 5 : (int) ((Math.pow(2, theLevel) * 5)));
     }
     
 }
