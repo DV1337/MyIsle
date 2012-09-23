@@ -1,0 +1,29 @@
+Tekkit
+
+Basicly if you want a tekkit server you will need the following plugins
+
+WorldGuard (i am not going to bother telling you why you need this)
+Tekkit Restrict (addon for World Guard that makes it tekkit-proof with safezones)
+Tekkit customizer (lets you repair a lot of problems with tekkit and prevent them)
+Disablecraft (compatable with tekkit so important)
+LWC (you may already know this mod with it's famus "locked with a magical spell" but did you know it supports tekkit?)
+Logincontrol (very important (atleast for server staff) to have. Will prevent identyty and permission theft)
+Multiverse core (ok i didn't have to tell you this one did I?)
+DeathChest (needed for a survival server because, lets face it, tekkit is more deadly then normal minecraft and has more
+            important items to protect. This will send items to a pre-defined chest upon death)
+Essentials and the essentials (you need the basic plugins for a normal bukkit server like essentials and worldedit)
+Economy plugin (tekkit has a lot of items that promote ecomomy. Many people create factories and such)
+PVP arena plugin (ok, you have guns and cannons now yay! Now they want something to shoot! (use World guard and 
+            tekkit restrict to prevent it from falling apart)
+Decoys (not a plugin but useful. Make greifer decoys and traps to help identify the greifers)
+MCbans (you need to prevent those greifers and if you can set it up, it was worth the time)
+World Border (this probably doesnt apply to you due to the server size you have, but players get as far from spawn as
+            possible
+
+
+Items to control
+
+World ancor (its a 3 by 3 chunk loader that acts as if it is a player)
+Nukes (it is HUGE)
+Novas (they are annoying)
+Cannons (they can disobay rules sometimes)
