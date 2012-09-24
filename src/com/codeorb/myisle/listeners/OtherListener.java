@@ -29,8 +29,9 @@ public class OtherListener implements Listener {
     public void onEntityDeath(EntityDeathEvent event){
         Entity e = event.getEntity();
         int dropAmount = 3;
-        if (e instanceof Creeper)
+        if (e instanceof Creeper) {
             dropAmount = 5;
+        }
         event.setDroppedExp(dropAmount);
     }
     
