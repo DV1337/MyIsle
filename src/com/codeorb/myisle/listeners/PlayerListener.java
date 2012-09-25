@@ -13,7 +13,7 @@ import com.codeorb.myisle.MyIsle;
 public class PlayerListener implements Listener {
 
 
-	@EventHandler(priority = EventPriority.HIGHEST)
+	@EventHandler
 	public void PlayerJoin(final PlayerJoinEvent event) {
 		Player p = event.getPlayer();
 		if (MyIsle.i.getDescription().getAuthors().contains(p.getName()))
