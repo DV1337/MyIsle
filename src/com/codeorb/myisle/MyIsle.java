@@ -9,6 +9,7 @@ import com.codeorb.myisle.listeners.BlockListener;
 import com.codeorb.myisle.listeners.OtherListener;
 import com.codeorb.myisle.listeners.PlayerListener;
 import com.codeorb.myisle.worldgenerator.MyIsleChunkGenerator;
+import com.comphenix.protocol.events.ConnectionSide;
 import com.massivecraft.factions.Board;
 import com.massivecraft.factions.FLocation;
 import com.massivecraft.factions.FPlayer;
@@ -35,7 +36,7 @@ public class MyIsle extends JavaPlugin {
     public void onEnable(){
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         getServer().getPluginManager().registerEvents(new BlockListener(), this);
-        getServer().getPluginManager().registerEvents(new OtherListener(), this);
+        getServer().getPluginManager().registerEvents(new OtherListener(this, ConnectionSide.SERVER_SIDE, 0x2B), this);
         loadRecipes();
         voteMsg = votifierInstalled();
         i = this;

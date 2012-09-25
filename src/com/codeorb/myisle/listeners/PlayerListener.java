@@ -16,7 +16,6 @@ public class PlayerListener implements Listener {
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void PlayerJoin(final PlayerJoinEvent event) {
 		Player p = event.getPlayer();
-		boolean isdev = false;
 		if (MyIsle.i.getDescription().getAuthors().contains(p.getName()))
 			Bukkit.broadcastMessage(p.getName()+ " is part of the MyIsle dev team!");
 		Bukkit.broadcastMessage(ChatColor.BLUE + "[MyIsle]" + ChatColor.GREEN + p.getName() + "has joined as level <var>");

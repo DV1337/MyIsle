@@ -4,4 +4,5 @@ version: 0.0.1
 author: myIsleDev
 authors: [evilmidget38, ludo7777, MYCRAFTisbest]
 description: The official myIsle plugin.
+depend: [ProtocolLib]
 load: STARTUP
