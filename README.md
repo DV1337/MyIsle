@@ -1,6 +1,6 @@
 <a href="http://cooltext.com"><img src="http://images.cooltext.com/2774578.png" width="260" height="93" alt="MyIsle
 " /></a>
-
+<img src="http://imageshack.us/a/img51/5030/myisle.png"/>
 <html>
 <body>
 //READ_ME
